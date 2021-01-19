@@ -1,0 +1,2 @@
+# nonemptystr
+Non-empty string
