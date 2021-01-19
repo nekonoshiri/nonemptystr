@@ -1,2 +1,2 @@
-from .exceptions import EmptyString
-from .nonemptystr import nonemptystr
+from .exceptions import EmptyString as EmptyString
+from .nonemptystr import nonemptystr as nonemptystr
