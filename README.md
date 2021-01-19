@@ -24,12 +24,12 @@ except EmptyString:
 
 ### Module `nonemptystr`
 
-#### `class` `nonemptystr(obj: object)`
+#### *class* `nonemptystr(obj: object)`
 
 Subclass of `str`.
 Raise `EmptyString` exception if `str(obj)` is empty string.
 
-#### `class` `EmptyString`
+#### *class* `EmptyString`
 
 Subclass of `ValueError`.
 
