@@ -1,8 +1,6 @@
 from __future__ import annotations
 
-
-class EmptyString(ValueError):
-    pass
+from .exceptions import EmptyString
 
 
 class nonemptystr(str):
