@@ -8,4 +8,4 @@ class nonemptystr(str):
         s = str(obj)
         if not s:
             raise EmptyString
-        return str.__new__(nonemptystr, s)  # type: ignore
+        return str.__new__(nonemptystr, s)
