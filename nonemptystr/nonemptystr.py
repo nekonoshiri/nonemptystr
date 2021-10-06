@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterator
+from typing import Any
 
 from .exceptions import EmptyString
 
@@ -14,4 +15,10 @@ class nonemptystr(str):
 
     @classmethod
     def __get_validators__(cls) -> Iterator[type[nonemptystr]]:
+        # for pydantic
         yield cls
+
+    @classmethod
+    def __modify_schema__(cls, field_schema: dict[Any, Any]) -> None:
+        # for pydantic
+        field_schema.update(minLength=1)

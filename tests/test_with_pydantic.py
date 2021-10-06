@@ -29,3 +29,7 @@ def test_validation_error() -> None:
         Model.parse_obj({"nes": ""})
     with pytest.raises(ValidationError):
         Model.parse_raw('{"nes": ""}')
+
+
+def test_schema() -> None:
+    assert Model.schema()["properties"]["nes"]["minLength"] == 1
