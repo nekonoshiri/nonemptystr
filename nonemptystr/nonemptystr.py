@@ -7,5 +7,5 @@ class nonemptystr(str):
     def __new__(cls, obj: object) -> nonemptystr:
         s = str(obj)
         if not s:
-            raise EmptyString
+            raise EmptyString("string is empty")
         return str.__new__(nonemptystr, s)
