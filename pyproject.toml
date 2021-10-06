@@ -26,6 +26,7 @@ flake8 = "^3.9.2"
 invoke = "^1.6.0"
 isort = "^5.9.3"
 mypy = "^0.910"
+pydantic = "^1.8.2"
 pytest = "^6.2.5"
 
 [build-system]

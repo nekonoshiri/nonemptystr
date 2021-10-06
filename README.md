@@ -20,6 +20,22 @@ except EmptyString:
     print("The name is empty.")
 ```
 
+### ... with [pydantic](https://github.com/samuelcolvin/pydantic)
+
+```Python
+from nonemptystr import nonemptystr
+from pydantic import BaseModel, ValidationError
+
+class Request(BaseModel):
+    user_id: nonemptystr
+
+try:
+    request = Request.parse_obj({"user_id": ""})
+    print(f"user_id: {request.user_id}")
+except ValidationError:
+    print("user_id is empty")
+```
+
 ## API
 
 ### Module `nonemptystr`
