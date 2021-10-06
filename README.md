@@ -36,6 +36,11 @@ except ValidationError:
     print("user_id is empty")
 ```
 
+Caveat: Currently it does NOT seem to work properly
+when it is used with field constraints of pydantic
+as: `user_id: nonemptystr = Field(..., max_length=10)`
+[(#1)](https://github.com/nekonoshiri/nonemptystr/issues/1)
+
 ## API
 
 ### Module `nonemptystr`
