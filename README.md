@@ -24,10 +24,10 @@ except EmptyString:
     print("The name is empty.")
 ```
 
-### ... with [pydantic](https://github.com/samuelcolvin/pydantic)
+### ... with [pydantic](https://github.com/pydantic/pydantic)
 
 ```sh
-pip install nonemptystr[pydantic]
+pip install nonemptystr, pydantic
 ```
 
 ```Python

@@ -24,7 +24,7 @@ class nonemptystr(str):
             return core_schema.no_info_after_validator_function(cls, handler(str))
         except NameError:
             raise RuntimeError(
-                "to use nonemptystr with Pydantic, install nonemptystr with 'pydantic' extra like: `pip install nonemptystr[pydantic]`",
+                "cannot import core_schema from pydantic_core, install Pydantic to use nonemptystr with Pydantic",
             ) from None
 
     # for pydantic

@@ -474,10 +474,7 @@ files = [
     {file = "typing_extensions-4.9.0.tar.gz", hash = "sha256:23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"},
 ]
 
-[extras]
-pydantic = ["pydantic"]
-
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1"
-content-hash = "5f82460d3dd08b8cabff117f7a2cbe1da88ee95c3dc755d5287181dc64299674"
+content-hash = "469d7107865a28bd2f67b88bd5993a97f25b951f6894723680d77cfeb909b7a9"
