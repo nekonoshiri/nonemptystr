@@ -9,6 +9,10 @@ Non-empty string.
 
 ## Usage
 
+```sh
+pip install nonemptystr
+```
+
 ```Python
 from nonemptystr import EmptyString, nonemptystr
 
@@ -20,7 +24,11 @@ except EmptyString:
     print("The name is empty.")
 ```
 
-### ... with [pydantic](https://github.com/samuelcolvin/pydantic)
+### ... with [pydantic](https://github.com/pydantic/pydantic)
+
+```sh
+pip install nonemptystr, pydantic
+```
 
 ```Python
 from nonemptystr import nonemptystr
@@ -30,16 +38,11 @@ class Request(BaseModel):
     user_id: nonemptystr
 
 try:
-    request = Request.parse_obj({"user_id": ""})
+    request = Request.model_validate({"user_id": ""})
     print(f"user_id: {request.user_id}")
 except ValidationError:
     print("user_id is empty")
 ```
-
-Caveat: Currently it does NOT seem to work properly
-when it is used with field constraints of pydantic
-as: `user_id: nonemptystr = Field(..., max_length=10)`
-[(#1)](https://github.com/nekonoshiri/nonemptystr/issues/1)
 
 ## API
 
