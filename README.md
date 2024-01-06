@@ -27,7 +27,7 @@ except EmptyString:
 ### ... with [pydantic](https://github.com/pydantic/pydantic)
 
 ```sh
-pip install nonemptystr, pydantic
+pip install nonemptystr pydantic
 ```
 
 ```Python
