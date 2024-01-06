@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonemptystr"
-version = "0.2.1"
+version = "1.0.0"
 license = "MIT"
 description = "Non-empty string"
 authors = ["Shiri Nekono <gexira.halen.toms@gmail.com>"]
@@ -11,7 +11,7 @@ repository = "https://github.com/nekonoshiri/nonemptystr"
 documentation = "https://github.com/nekonoshiri/nonemptystr"
 keywords = ["str"]
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
   "Topic :: Software Development :: Libraries",
   "Topic :: Utilities"
