@@ -1,5 +1,5 @@
 import pytest
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, Field, ValidationError
 
 from nonemptystr import nonemptystr
 
@@ -33,3 +33,18 @@ def test_validation_error() -> None:
 
 def test_schema() -> None:
     assert Model.model_json_schema()["properties"]["nes"]["minLength"] == 1
+
+
+def test_nonemptystr_can_be_used_with_constraints() -> None:
+    class ModelWithConstraints(BaseModel):
+        nes: nonemptystr = Field(..., max_length=5)
+
+    assert type(ModelWithConstraints(nes="hello").nes) is nonemptystr  # type: ignore
+    assert type(ModelWithConstraints(nes=nonemptystr("hello")).nes) is nonemptystr
+
+    with pytest.raises(ValidationError):
+        ModelWithConstraints(nes="")  # type: ignore
+    with pytest.raises(ValidationError):
+        ModelWithConstraints(nes="thanks")  # type: ignore
+    with pytest.raises(ValidationError):
+        ModelWithConstraints(nes=nonemptystr("thanks"))
