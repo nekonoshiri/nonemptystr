@@ -1,0 +1,5 @@
+exclude = ["__pycache__", ".git", ".mypy_cache", ".pytest_cache", ".ruff_cache", ".venv", "dist"]
+
+[lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
