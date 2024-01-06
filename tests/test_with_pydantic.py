@@ -19,7 +19,7 @@ class Model(BaseModel):
 )
 def test_normal(model: Model) -> None:
     assert model.nes == nonemptystr("hello")
-    assert type(model.nes) == nonemptystr
+    assert type(model.nes) is nonemptystr
 
 
 def test_validation_error() -> None:
